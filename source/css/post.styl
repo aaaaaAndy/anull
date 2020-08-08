@@ -105,3 +105,42 @@
     li
       position relative
       line-height 30px
+  code
+    color $theme-color
+    background-color $theme-bg-color
+    padding 2px 6px
+    border-radius 4px
+    letter-spacing 1.2
+    font-family $code-font-family
+  blockquote
+    position relative
+    padding-top 24px
+    padding-left 14px
+    padding-bottom 5px
+    margin-bottom 36px
+    &:before
+      content ""
+      display block
+      width 2px
+      height 100%
+      position: absolute
+      left -1px
+      top 10px
+      margin-right 58px
+      background-color $theme-color
+  blockquote
+    &:after
+      content '“'
+      display block
+      width 10px
+      height 10px
+      font-size 30px
+      position: absolute
+      left 8px
+      top 6px
+      margin-right 58px
+      color $theme-color
+  blockquote
+    *
+      color rgba(0, 0, 0, 0.5)
+
