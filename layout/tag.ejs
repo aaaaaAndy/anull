@@ -1,0 +1,44 @@
+
+
+<% if(is_tag()){ %>
+<div class="tag-container">
+    <div class="recent-posts">
+        <% var last_year = ''; %>
+        <% page.posts.each(function (post) { %>
+
+            <div class="recent-posts-item">
+                <div class="recent-posts-item-line"></div>
+                <div class="recent-posts-item-title">
+                    <a href="<%- url_for(post.path) %>">
+                        <% if(post.title.indexOf('/') > -1) {%>
+                        <%=post.title.split('/')[1] %>
+                        <% } else { %>
+                        <%=post.title %>
+                        <% }%>
+                    </a>
+                </div>
+                <div class="recent-posts-item-excerpt">
+                    <%=Object.keys(post)%>
+                    <%=post.excerpt%>
+                </div>
+                <div class="recent-posts-item-more">
+                    <a href="<%=url_for(post.path)%>">阅读更多</a>
+                </div>
+            </div>
+        <% }) %>
+        <%- partial('_partial/paginator') %>
+    </div>
+</div>
+<% }else{ %>
+<div id="tag" class="tag-container">
+    <%site.tags.forEach(item=>{%>
+    <div class="tag-content">
+        <a class="tag-content-name" href="<%-url_for(item.path)%>">
+            <%- item.name%>
+        </a>
+        <small class="tag-content-length"> - <%-item.length%></small>
+    </div>
+    <%})%>
+</div>
+<% } %>
+

@@ -1,0 +1,22 @@
+
+
+<% if (page.posts.length > 0) { %>
+  <div id="recent-posts" class="recent-posts">
+    <% page.posts.sort('date', -1).limit(10).each(post => { %>
+    <div class="recent-posts-item">
+      <div class="recent-posts-item-line"></div>
+      <div class="recent-posts-item-title">
+        <a href="<%=url_for(post.path)%>"><%=post.title%></a>
+      </div>
+      <div class="recent-posts-item-excerpt">
+        <%=post.excerpt%>
+      </div>
+      <div class="recent-posts-item-more">
+        <a href="<%=url_for(post.path)%>">阅读更多</a>
+      </div>
+    </div>
+    <% }); %>
+  </div>
+<% } %>
+
+<%- partial('_partial/paginator') %>

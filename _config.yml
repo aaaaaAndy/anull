@@ -1,0 +1,19 @@
+
+# html lang
+language: en
+
+# main menu navigation
+menu:
+  首页: /
+  分类: /category
+  标签: /tag
+  关于: /about
+
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /css/index.css
+
+# scripts loaded in the end of the body
+scripts:
+- /js/anull.js

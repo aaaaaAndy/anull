@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="<%=config.language%>">
+<head>
+  <meta charset="UTF-8" >
+  <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
+    <!-- stylesheets list from _config.yml -->
+    <% theme.stylesheets.forEach(url => { %>
+      <link rel="stylesheet" href="<%=url%>">
+    <% }); %>
+  <% } %>
+
+    <%
+    function getPageTitle() {
+      var pageTitle = page.title || config.subtitle || 'Home';
+      if (is_archive()) pageTitle = 'Archives';
+      if (is_tag()) pageTitle = 'Tag: ' + page.tag;
+      if (is_category()) pageTitle = 'Category: ' + page.category;
+      return pageTitle;
+    }
+  %>
+  <title><%=getPageTitle() %></title>
+</head>
+<body>
+
+    <%-partial('_partial/header', { cache: true })%>
+
+    <div id="content-outer" class="content-outer">
+        <div id="content-inner" class="content-inner">
+            <%- body %>
+        </div>
+    </div>
+
+<% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
+    <!-- scripts list from theme config.yml -->
+    <% theme.scripts.forEach(url => { %>
+    <script src="<%=url%>"></script>
+    <% }); %>
+<% } %>
+
+</body>
+</html>

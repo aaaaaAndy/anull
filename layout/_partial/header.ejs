@@ -1,0 +1,12 @@
+
+<div id="menu-outer" class="menu-outer">
+    <div id="menu-inner" class="menu-inner">
+        <% Object.keys(theme.menu).forEach(key => { %>
+            <span class="menu-inner-item">
+                <a href="<%=theme.menu[key]%>">
+                    <%= key %>
+                </a>
+            </span>
+        <% }) %>
+    </div>
+</div>
