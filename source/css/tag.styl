@@ -1,36 +1,22 @@
-
 .tag-container
   width 100%
-  padding-top 64px
   .tag-content
-    cursor pointer
     display inline-block
-    min-width 50px
-    height 30px
-    line-height 30px
-    border 1px solid rgba(0, 0, 0, 0.35)
-    border-radius 15px
-    padding-left 16px
-    padding-right 16px
-    margin-bottom 8px
-    margin-right 4px
-    transition all 0.05s linear
-    text-align center
-    a.tag-content-name
-      font-size 15px
-      color rgba(0, 0, 0, 0.75)
-    .tag-content-length
-      font-size 12px
-      color rgba(0, 0, 0, 0.75)
-  .tag-content:hover
-    transform scale(1.1)
-    margin-right 6px
-    margin-left 2px
-    border-color $theme-color
-    .tag-content-name
-      color $theme-color
-    .tag-content-length
-      color $theme-color
+    color: #f78769
+    text-decoration: none
+    font: 14px Lato
+    transition: .3s
+    margin: 0 10px 8px 0
+    border: 1px dashed #ddd
+    padding 2px 6px
+    &:hover
+      color: #ddd
 
-
+.tag-content-name
+  color: #f78769
+  text-decoration: none
+  font: 14px Lato
+  transition: .3s
+  &:hover
+    color: #ddd
 

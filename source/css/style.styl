@@ -1,0 +1,51 @@
+@import "_partial/font"
+@import "_partial/header"
+@import "_partial/post"
+@import "_partial/paginator"
+
+@import "_widget/aside"
+@import "_widget/category"
+
+@import "category"
+@import "post"
+@import "tag"
+
+@import "_highlight/tomorrow-night-eighties.styl"
+
+body
+  font-size: 1rem
+  line-height: 1.6
+  margin: 0
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+
+.container
+  max-width: 1142px
+  width: 80%
+  box-sizing: border-box
+  padding: 3em 5%
+  background: white
+  margin: 3em auto
+  overflow: hidden
+
+  .main
+    width: 100%
+    display flex
+    justify-content space-between
+    align-items flex-start
+
+.invisibile
+  visibility: hidden
+
+.hidden
+  display: none
+
+
+@media screen and (max-width: 1015px)
+  .container .main
+    width: 100%
+
+@media screen and (max-width: 640px)
+  .container
+    margin: 3em 0 0
+    width: 100%
+    padding: 1.75em

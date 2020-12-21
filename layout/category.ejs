@@ -1,13 +1,10 @@
-
 <div class="categories-container">
     <% site.categories.forEach(category_item=>{ %>
         <div class="categories-card">
             <div class="categories-card-header">
                 <div class="categories-card-header-content">
                     <a href="<%- url_for(category_item.path) %>">
-                        <h3>
-                            <%- category_item.name %>
-                        </h3>
+                        <%- category_item.name %>
                     </a>
                 </div>
             </div>
@@ -19,7 +16,8 @@
                                 href="<%- url_for(post_item.path) %>"
                                 title="<%- post_item.title %>"
                         >
-                            &nbsp;&nbsp;&nbsp;<%- post_item.title %>
+                            <%- index + 1 %>.
+                            <%- post_item.title %>
                         </a>
                     </article>
                 <% }) %>
@@ -27,4 +25,3 @@
         </div>
     <% }) %>
 </div>
-
