@@ -14,18 +14,39 @@
   font-family: Lato-Bold;
   src: url('../font/Lato-Bold.ttf'), url('../font/Lato-Bold.eot')
 
-pre
-  margin-left 16px
-  font-family JetBrains Mono, Segoe UI Emoji, Segoe UI Symbol
-
 .highlight
-  margin 16px 0 !important
-  border-radius 8px
+  //border-radius: 4px
+  //table
+  //  border-collapse: separate;
+  //  border-spacing: 20px 0
+  //  word-break: break-all
+  //  .gutter
+  //    color #f99157
+  //    margin-right 16px
+  //  td
+  //    vertical-align top
 
-p
-  code
-    color #f78769
-    font-size 14px
-    margin 0 3px
-    font-family JetBrains Mono, Segoe UI Emoji, Segoe UI Symbol
+ol
+  padding-left 72px
+  box-sizing border-box
+  li
+    font-size 15px
+    margin-bottom 16px
 
+ul
+  padding-left 72px
+  box-sizing border-box
+  li
+    font-size 15px
+    margin-bottom 16px
+
+
+blockquote {
+  margin: 0;
+  padding: 0;
+  word-break: break-all;
+}
+.code pre
+  width: 100%  // 注释这句或者下面两句，解决有时候会显示垂直滚动条问题
+  white-space: pre-wrap  //自动换行，不显示横向滚动条
+  word-wrap: break-word  //自动换行，不显示横向滚动条

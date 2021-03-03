@@ -2,21 +2,26 @@
   width 100%
   .tag-content
     display inline-block
-    color: #f78769
+    color rgb(40, 40, 40)
     text-decoration: none
     font: 14px Lato
     transition: .3s
     margin: 0 10px 8px 0
-    border: 1px dashed #ddd
+    border-bottom: 1px dashed #ddd
     padding 2px 6px
+    font-family "JetBrains Mono", Lato-Bold, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
     &:hover
-      color: #ddd
+      color rgb(20, 28, 52)
 
 .tag-content-name
-  color: #f78769
+  color rgb(40, 40, 40)
   text-decoration: none
-  font: 14px Lato
+  font-size 18px
   transition: .3s
+  font-family "JetBrains Mono", Lato-Bold, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
   &:hover
-    color: #ddd
-
+    color rgb(20, 28, 52)
+.tag-content-length
+  position relative
+  left -10px
+  font italic

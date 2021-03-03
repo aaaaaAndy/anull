@@ -1,15 +1,15 @@
 # Nav
 social:
-  Github: https://github.com/FrontendSophie
+  Github: https://github.com/aaaaaandy
 
 menu:
-  Home: /
+  Home: /blog
   Category: /blog/category
   Tag: /blog/tag
   About: /blog/about
 
 # Background image, color
-background: 'url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3'
+background: ''
 
 # Favicon
 favicon: img/favicon.ico

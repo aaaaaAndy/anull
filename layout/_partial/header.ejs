@@ -1,28 +1,24 @@
 <header class="header">
-    <nav class="mobile-menu" style="background: <%- theme.background %>">
-        <h3 class="invisibile">
-            <a href="<%- url_for() %>" class="logo">
-                <%= config.title %>
-            </a>
-        </h3>
-        <button class="menu">menu</button>
-    </nav>
-
-    <button class="ipad-menu menu">menu</button>
-
     <h1 class="title" id="main-title">
         <a href="<%- url_for() %>" class="logo">
             <%= config.title %>
         </a>
     </h1>
-    <h2 class="desc">
-        <%= config.subtitle %>
-    </h2>
+
+    <%
+    function getMenuItemClass(url, key) {
+      if (url.indexOf(key + '/index') > -1) {
+        return 'menu-inner-item menu-inner-item-clicked';
+      }
+
+      return 'menu-inner-item';
+    }
+    %>
 
     <div class="links">
         <ul id="menu-inner" class="menu-inner">
             <% Object.keys(theme.menu).forEach(key => { %>
-            <li class="menu-inner-item">
+            <li class="<%=getMenuItemClass(url, theme.menu[key])%>">
                 <a href="<%=theme.menu[key]%>">
                     <%= key %>
                 </a>
@@ -31,3 +27,9 @@
         </ul>
     </div>
 </header>
+
+<script type="text/javascript">
+    function isCurrentPage(url, key) {
+      console.log(123)
+    }
+</script>

@@ -1,14 +1,39 @@
 .categories-container
   width 100%
-  column-count 4
-  padding 0 8px 32px
-  column-gap 16px
+  height 1000px
+  padding 0 0 32px
+  display: flex
+  flex-flow: column wrap;
   .categories-card
+    position: relative
     width 240px
     min-height 100px
-    border 1px solid #dfdede
-    margin-bottom 16px
+    margin 8px
     break-inside avoid
+    text-align left
+    z-index 1
+    background-position: center top;
+    background-size: cover;
+    &:before
+      content: '';
+      position: absolute
+      top 0
+      left 0
+      right 0
+      bottom 0
+      box-shadow: 0 1px 10px rgba(200, 200, 200, 0.3);
+    &:after
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(249,250,251,0.35);
+      z-index: -1;
+      background-position: center top;
+      background-size: cover;
+      background-attachment: fixed;
     .categories-card-header
       width 100%
       height 42px
@@ -21,26 +46,23 @@
         justify-content space-between
         align-items: center
         a
-          color: #f78769
+          color rgb(20, 28, 52)
           text-decoration none
-          font-size 18px
+          font-size 16px
           font-weight bold
-          font-family Lato-Bold, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'
+          font-family "JetBrains Mono", Lato-Bold, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
     .categories-card-body
       padding 16px
       .article-item
         position relative
         width 100%
-        overflow hidden
-        text-overflow ellipsis
-        white-space nowrap
         line-height 24px
         .article-item-link
           font-size 14px
-          color grey
+          color rgb(40, 40, 40)
           text-decoration none
           font-style italic
-          font-family Lato, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'
+          font-family "JetBrains Mono", Lato-Bold, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
           &:hover
             text-decoration underline
       .article-item:hover
